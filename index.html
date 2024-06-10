@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Co-Working Space Booking System</title>
+</head>
+<body>
+  <h1>Co-Working Space Booking System</h1>
+
+  <div class="booking-form">
+      <h2>Book a Desk</h2>
+      <form id="bookingForm">
+          <label for="deskType">Select Desk Type:</label>
+          <select id="deskType" name="deskType" required>
+              <option value="" disabled selected>Select...</option>
+              <option value="individual">Individual Desk</option>
+              <option value="team">Team Desk</option>
+          </select>
+
+          <div id="membershipTierContainer" class="hidden">
+              <label for="membershipTier">Select Membership Tier:</label>
+              <select id="membershipTier" name="membershipTier">
+                  <option value="" disabled selected>Select...</option>
+                  <option value="basic">Basic - $10/hour</option>
+                  <option value="premium">Premium - $15/hour</option>
+                  <option value="executive">Executive - $20/hour</option>
+              </select>
+          </div>
+
+          <label for="deskNumber">Select Desk Number:</label>
+          <select id="deskNumber" name="deskNumber" required>
+              <!-- Options will be populated by JavaScript here -->
+          </select>
+
+          <label for="hours">Number of Hours:</label>
+          <input type="number" id="hours" name="hours" min="1" required>
+
+          <button type="submit">Book Desk</button>
+      </form>
+      <div id="confirmationMessage"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
